@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require_relative "handler"
+
+handler = Handler.new
+handler.sayhello
+
+if ARGV.count < 1
+  puts "please tell me what you would like me to do"
+  exit 0
+end
+
+handler.send(ARGV.shift)
+
+exit 0
