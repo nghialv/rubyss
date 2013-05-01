@@ -10,15 +10,15 @@ end
 
 module MyTwitter
 	# get timeline
-  def tl
-    result = Twitter.home_timeline(count: 10)
+	def tl
+		result = Twitter.home_timeline(count: 10)
 		result.each do |r|
 			puts "@#{r.user.screen_name}".green + " #{r.text}".white
 		end
-  end
+	end
 
 	# tweet message
-  def tw
+	def tw
 		Twitter.update(ARGV[0]) if ARGV[0]
-  end
+	end
 end
