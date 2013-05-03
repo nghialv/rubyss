@@ -1,7 +1,9 @@
 require_relative "mytwitter"
+require_relative "downloader"
 
 class Handler
   include MyTwitter
+  include Downloader
 
   def sayhello
     puts "Hi, #{%x(echo $USER)}"
